@@ -1,5 +1,5 @@
 const path = require('path');
-const rimraf = require('rimraf');
+const colors = require('colors/safe');
 const mkdirp = require('mkdirp');
 const imagemagick = require('imagemagick');
 
@@ -8,6 +8,12 @@ const imageFormats = require('./config/image-formats');
 const imageRatios = require('./config/image-ratios');
 const images = require('./config/images');
 
+const MAX_OPERATIONS = 4;
+
+/**
+ * @param {string} format 
+ * @returns {number}
+ */
 function getQualityByFormat(format) {
   switch (format) {
     case imageFormats.FORMAT_JPG:
@@ -19,79 +25,113 @@ function getQualityByFormat(format) {
   }
 }
 
-const createdFiles = [];
+/**
+ * @returns {{dir:string, options:{}}[]}
+ */
+function getItemList() {
+  const items = [];
+  images.forEach(image => {
+    const keys = [];
+    image.imageTypes.forEach(imageType => {
+      imageType.widths.forEach(width => {
+        const itemKey = `${imageType.ratio}_${width}_${imageType.format}`;
+        if (keys.indexOf(itemKey) < 0) {
+          keys.push(itemKey);
 
-Promise.all(
-  images.map(image => {
-    const exportItems = image.imageTypes.reduce((acc, imageType) => {
-      if (imageType && imageType.widths) {
-        return acc.concat(
-          imageType.widths.map(width => ({
-            width: width,
-            ratio: imageType.ratio,
-            format: imageType.format,
-          }))
-        );
-      }
-      return acc;
-    }, []);
-
-    const existingList = [];
-    let filteredExportItems = exportItems.filter(item => {
-      const key = `${item.ratio}_${item.width}_${item.format}`;
-      if (existingList.indexOf(key)) {
-        existingList.push(key);
-        return true;
-      }
-      return false;
-    });
-
-    return Promise.all(
-      filteredExportItems.map(item => {
-        const width = item.width;
-        const ratio = item.ratio;
-        const format = item.format;
-
-        return new Promise((resolve, reject) => {
-          const outputDir = path.join(
+          const dir = path.join(
             filePaths.IMAGES_OUTPUT_DIR,
-            `${ratio}/${image.name}`
-          );
-          const outputFile = path.resolve(
-            outputDir,
-            `${image.name}_${ratio}_${width}.${format}`
+            `${imageType.ratio}/${image.name}`
           );
 
-          mkdirp(outputDir, error => {
-            if (error) {
-              reject(error);
-            } else {
-              const options = Object.assign(
-                {},
-                {
-                  srcPath: image.source,
-                  dstPath: outputFile,
-                  width: width,
-                  format: format,
-                  quality: getQualityByFormat(format),
-                }
-              );
+          const options = {
+            srcPath: image.source,
+            dstPath: path.resolve(
+              dir,
+              `${image.name}_${imageType.ratio}_${width}.${imageType.format}`
+            ),
+            width: width,
+            format: imageType.format,
+            quality: getQualityByFormat(imageType.format),
+          };
 
-              imagemagick.resize(options, error => {
-                if (error) {
-                  reject(error);
-                } else {
-                  createdFiles.push(outputFile);
-                  console.log(`File "${outputFile}" created.`);
-                  resolve();
-                }
-              });
-            }
-          });
+          items.push({ dir: dir, options: options });
+        }
+      });
+    });
+  });
+  return items;
+}
+
+/**
+ * @param {{dir:string, options:{}}} item 
+ * @returns {Promise}
+ */
+function convert(item) {
+  return new Promise((resolve, reject) => {
+    mkdirp(item.dir, error => {
+      if (error) {
+        reject(error);
+      } else {
+        imagemagick.resize(item.options, error => {
+          if (error) {
+            reject(error);
+          } else {
+            resolve();
+          }
         });
-      })
-    );
-  })
-)
-  .then(() => console.log(`Done (${createdFiles.length} files)`))
-  .catch(error => console.log(error));
+      }
+    });
+  });
+}
+
+let completed = [];
+let failed = [];
+let queue = getItemList();
+let current = [];
+
+function run() {
+  if (current.length === 0 && queue.length === 0) {
+    end();
+  } else {
+    const count = Math.min(MAX_OPERATIONS - current.length, queue.length);
+    const newItems = queue.splice(0, count);
+
+    newItems.forEach(item => {
+      current.push(item);
+
+      convert(item)
+        .then(
+          () => {
+            console.log(colors.green(item.options.dstPath));
+            completed.push(item);
+          },
+          () => {
+            console.log(colors.red(item.options.dstPath));
+            failed.push(item);
+          }
+        )
+        .then(error => {
+          current = current.filter(tempItem => tempItem !== item);
+          run();
+        });
+    });
+  }
+}
+
+function end() {
+  const endTime = Date.now();
+  const duration = ((endTime - startTime) / 1000).toFixed(2);
+
+  console.log(`Duration: ${duration} s`);
+
+  console.log(colors.green(`Files created: ${completed.length}`));
+
+  if (failed.length) {
+    console.log(colors.red(`Failures: ${failed.length}`));
+  } else {
+    console.log(colors.green(`Failures: ${failed.length}`));
+  }
+}
+
+const startTime = Date.now();
+run();
