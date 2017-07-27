@@ -9,6 +9,11 @@ module.exports = {
     format: imageFormats.FORMAT_PNG,
     widths: [380, 450, 760, 900],
   },
+  image_stage_portrait: {
+    ratio: imageRatios.RATIO_2x3,
+    format: imageFormats.FORMAT_JPG,
+    widths: [300, 380, 490, 640, 760, 980, 1280, 1520],
+  },
   full_viewport_width: {
     ratio: imageRatios.RATIO_16x9,
     format: imageFormats.FORMAT_JPG,
@@ -47,6 +52,11 @@ module.exports = {
     ratio: imageRatios.RATIO_1x1,
     format: imageFormats.FORMAT_JPG,
     widths: [80, 160, 240, 380, 480, 760],
+  },
+  half_content_width_portrait: {
+    ratio: imageRatios.RATIO_2x3,
+    format: imageFormats.FORMAT_JPG,
+    widths: [240, 380, 490, 640, 980],
   },
   retailer_logo: {
     ratio: imageRatios.RATIO_1xy,
