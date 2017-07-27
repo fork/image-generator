@@ -76,8 +76,44 @@ const IMAGES = [
     format: FORMAT_JPG,
   },
   {
+    name: 'lunch-table-left',
+    source: path.resolve(IMAGES_INPUT_DIR, '2x3/lunch-table-left_2x3.png'),
+    ratio: RATIO_2x3,
+    format: FORMAT_PNG,
+  },
+  {
     name: 'lunch-table-right',
     source: path.resolve(IMAGES_INPUT_DIR, '2x3/lunch-table-right_2x3.png'),
+    ratio: RATIO_2x3,
+    format: FORMAT_PNG,
+  },
+  {
+    name: 'assortment-left',
+    source: path.resolve(IMAGES_INPUT_DIR, '2x3/assortment-left_2x3.png'),
+    ratio: RATIO_2x3,
+    format: FORMAT_PNG,
+  },
+  {
+    name: 'assortment-right',
+    source: path.resolve(IMAGES_INPUT_DIR, '2x3/assortment-right_2x3.png'),
+    ratio: RATIO_2x3,
+    format: FORMAT_PNG,
+  },
+  {
+    name: 'image-copy-button-teaser-left',
+    source: path.resolve(
+      IMAGES_INPUT_DIR,
+      '2x3/image-copy-button-teaser-left_2x3.png'
+    ),
+    ratio: RATIO_2x3,
+    format: FORMAT_PNG,
+  },
+  {
+    name: 'image-copy-button-teaser-right',
+    source: path.resolve(
+      IMAGES_INPUT_DIR,
+      '2x3/image-copy-button-teaser-right_2x3.png'
+    ),
     ratio: RATIO_2x3,
     format: FORMAT_PNG,
   },
