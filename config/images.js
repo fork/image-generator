@@ -73,6 +73,17 @@ module.exports = [
     ],
   },
   /*
+   * 1xy
+   */
+  {
+    name: 'retailer-logo',
+    source: path.resolve(
+      filePaths.IMAGES_INPUT_DIR,
+      '1xy/retailer-logo_1xy.jpg'
+    ),
+    imageTypes: [imageTypes.retailer_logo],
+  },
+  /*
    * Decoration (2:3)
    */
   {
