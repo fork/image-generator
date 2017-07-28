@@ -123,4 +123,40 @@ module.exports = {
       { width: '1px' },
     ],
   },
+  image_gallery_landscape: {
+    ratio: RATIO_16x9,
+    format: FORMAT_JPG,
+    fallbackWidth: 640,
+    widths: [375, 470, 640, 768, 960, 1280, 1600, 1920],
+    sizes: [
+      { condition: 'min-width: 1600px', width: '50vw' },
+      { condition: 'min-width: 980px', width: '60vw' },
+      { condition: 'min-width: 700px', width: '75vw' },
+      { width: '100vw' },
+    ],
+  },
+  image_gallery_portrait: {
+    ratio: RATIO_2x3,
+    format: FORMAT_JPG,
+    fallbackWidth: 240,
+    widths: [150, 180, 240, 300, 380, 490, 580, 760],
+    sizes: [
+      { condition: 'min-width: 1600px', width: '20vw' },
+      { condition: 'min-width: 980px', width: '25vw' },
+      { condition: 'min-width: 700px', width: '30vw' },
+      { width: '100vw' },
+    ],
+  },
+  image_gallery_square: {
+    ratio: RATIO_1x1,
+    format: FORMAT_JPG,
+    fallbackWidth: 360,
+    widths: [240, 270, 380, 480, 540, 440, 720, 880, 1080],
+    sizes: [
+      { condition: 'min-width: 1600px', width: '30vw' },
+      { condition: 'min-width: 980px', width: '35vw' },
+      { condition: 'min-width: 700px', width: '45vw' },
+      { width: '100vw' },
+    ],
+  },
 };
