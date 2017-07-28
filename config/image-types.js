@@ -151,7 +151,7 @@ module.exports = {
     ratio: RATIO_1x1,
     format: FORMAT_JPG,
     fallbackWidth: 360,
-    widths: [240, 270, 380, 480, 540, 440, 720, 880, 1080],
+    widths: [240, 270, 380, 480, 540, 760, 880, 1080],
     sizes: [
       { condition: 'min-width: 1600px', width: '30vw' },
       { condition: 'min-width: 980px', width: '35vw' },
