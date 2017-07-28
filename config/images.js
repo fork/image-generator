@@ -14,6 +14,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   {
@@ -22,6 +23,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   {
@@ -30,6 +32,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   {
@@ -38,6 +41,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   {
@@ -46,6 +50,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   {
@@ -54,6 +59,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   {
@@ -62,6 +68,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   {
@@ -70,6 +77,7 @@ module.exports = [
     imageTypes: [
       imageTypes.half_content_width_square,
       imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
     ],
   },
   /*
@@ -143,6 +151,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   {
@@ -151,6 +160,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   {
@@ -159,6 +169,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   {
@@ -167,6 +178,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   {
@@ -175,6 +187,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   {
@@ -183,6 +196,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   {
@@ -191,6 +205,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   {
@@ -199,6 +214,7 @@ module.exports = [
     imageTypes: [
       imageTypes.image_stage_portrait,
       imageTypes.half_content_width_portrait,
+      imageTypes.image_gallery_portrait,
     ],
   },
   /*
@@ -211,6 +227,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
   {
@@ -220,6 +237,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
   {
@@ -229,6 +247,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
   {
@@ -238,6 +257,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
   {
@@ -250,6 +270,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
   {
@@ -262,6 +283,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
   {
@@ -274,6 +296,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
   {
@@ -286,6 +309,7 @@ module.exports = [
       imageTypes.full_viewport_width,
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
     ],
   },
 ];
