@@ -4,8 +4,6 @@ const mkdirp = require('mkdirp');
 const imagemagick = require('imagemagick');
 
 const filePaths = require('./config/file-paths');
-const imageFormats = require('./config/image-formats');
-const imageRatios = require('./config/image-ratios');
 const images = require('./config/images');
 
 const MAX_OPERATIONS = 4;
@@ -16,9 +14,9 @@ const MAX_OPERATIONS = 4;
  */
 function getQualityByFormat(format) {
   switch (format) {
-    case imageFormats.FORMAT_JPG:
+    case 'jpg':
       return 0.85;
-    case imageFormats.FORMAT_PNG:
+    case 'png':
       return 0.9;
     default:
       return 1.0;
