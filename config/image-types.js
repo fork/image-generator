@@ -159,4 +159,35 @@ module.exports = {
       { width: '100vw' },
     ],
   },
+  teaser_landscape: {
+    ratio: RATIO_16x9,
+    format: FORMAT_JPG,
+    fallbackWidth: 640,
+    widths: [375, 470, 640, 768, 960, 1280, 1600, 1920],
+    sizes: [
+      { condition: 'min-width: 1600px', width: '50vw' },
+      { condition: 'min-width: 980px', width: '60vw' },
+      { condition: 'min-width: 700px', width: '75vw' },
+      { width: '100vw' },
+    ],
+  },
+  teaser_square: {
+    ratio: RATIO_1x1,
+    format: FORMAT_JPG,
+    fallbackWidth: 480,
+    widths: [240, 380, 480, 760, 960],
+    sizes: [
+      { condition: 'min-width: 980px', width: '30vw' },
+      { condition: 'min-width: 700px', width: '40vw' },
+      { condition: 'min-width: 450px', width: '45vw' },
+      { width: '100vw' },
+    ],
+  },
+  teaser_jackpot: {
+    ratio: RATIO_1x1,
+    format: FORMAT_PNG,
+    fallbackWidth: 222,
+    widths: [222, 444],
+    sizes: [{ width: '222px' }],
+  },
 };

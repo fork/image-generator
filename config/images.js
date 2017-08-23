@@ -29,20 +29,47 @@ module.exports = [
   {
     name: 'product_a',
     source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/product_a_1x1.png'),
-    imageTypes: [
-      imageTypes.half_content_width_square,
-      imageTypes.one_third_content_width_square,
-      imageTypes.image_gallery_square,
-    ],
+    imageTypes: [imageTypes.teaser_square],
   },
   {
     name: 'product_b',
     source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/product_b_1x1.png'),
-    imageTypes: [
-      imageTypes.half_content_width_square,
-      imageTypes.one_third_content_width_square,
-      imageTypes.image_gallery_square,
-    ],
+    imageTypes: [imageTypes.teaser_square],
+  },
+  {
+    name: 'product_c',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/product_c_1x1.png'),
+    imageTypes: [imageTypes.teaser_square],
+  },
+  {
+    name: 'jackpot_a',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/jackpot_a_1x1.png'),
+    imageTypes: [imageTypes.teaser_jackpot],
+  },
+  {
+    name: 'jackpot_b',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/jackpot_b_1x1.png'),
+    imageTypes: [imageTypes.teaser_jackpot],
+  },
+  {
+    name: 'jackpot_c',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/jackpot_c_1x1.png'),
+    imageTypes: [imageTypes.teaser_jackpot],
+  },
+  {
+    name: 'jackpot_d',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/jackpot_d_1x1.png'),
+    imageTypes: [imageTypes.teaser_jackpot],
+  },
+  {
+    name: 'jackpot_e',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/jackpot_e_1x1.png'),
+    imageTypes: [imageTypes.teaser_jackpot],
+  },
+  {
+    name: 'jackpot_f',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/jackpot_f_1x1.png'),
+    imageTypes: [imageTypes.teaser_jackpot],
   },
   {
     name: 'retailer_a',
@@ -164,24 +191,6 @@ module.exports = [
     ],
   },
   {
-    name: 'product_a',
-    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '2x3/product_a_2x3.png'),
-    imageTypes: [
-      imageTypes.image_stage_portrait,
-      imageTypes.half_content_width_portrait,
-      imageTypes.image_gallery_portrait,
-    ],
-  },
-  {
-    name: 'product_b',
-    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '2x3/product_b_2x3.png'),
-    imageTypes: [
-      imageTypes.image_stage_portrait,
-      imageTypes.half_content_width_portrait,
-      imageTypes.image_gallery_portrait,
-    ],
-  },
-  {
     name: 'retailer_a',
     source: path.resolve(filePaths.IMAGES_INPUT_DIR, '2x3/retailer_a_2x3.png'),
     imageTypes: [
@@ -228,6 +237,7 @@ module.exports = [
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
       imageTypes.image_gallery_landscape,
+      imageTypes.teaser_landscape,
     ],
   },
   {
@@ -238,26 +248,7 @@ module.exports = [
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
       imageTypes.image_gallery_landscape,
-    ],
-  },
-  {
-    name: 'product_a',
-    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '16x9/product_a_16x9.png'),
-    imageTypes: [
-      imageTypes.full_viewport_width,
-      imageTypes.full_content_width,
-      imageTypes.half_content_width_landscape,
-      imageTypes.image_gallery_landscape,
-    ],
-  },
-  {
-    name: 'product_b',
-    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '16x9/product_b_16x9.png'),
-    imageTypes: [
-      imageTypes.full_viewport_width,
-      imageTypes.full_content_width,
-      imageTypes.half_content_width_landscape,
-      imageTypes.image_gallery_landscape,
+      imageTypes.teaser_landscape,
     ],
   },
   {
