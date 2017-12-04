@@ -4,6 +4,7 @@ const RATIO_1x1 = '1x1';
 const RATIO_1xy = '1xy';
 const RATIO_2x3 = '2x3';
 const RATIO_16x9 = '16x9';
+const RATIO_24x10 = '24x10';
 
 const FORMAT_JPG = 'jpg';
 const FORMAT_PNG = 'png';
@@ -189,5 +190,17 @@ module.exports = {
     fallbackWidth: 222,
     widths: [222, 444],
     sizes: [{ width: '222px' }],
+  },
+  full_content_width_wide: {
+    ratio: RATIO_24x10,
+    format: FORMAT_PNG,
+    fallbackWidth: 640,
+    widths: [375, 470, 640, 768, 960, 1280, 1600, 1920],
+    sizes: [
+      { condition: 'min-width: 1600px', width: '50vw' },
+      { condition: 'min-width: 980px', width: '60vw' },
+      { condition: 'min-width: 700px', width: '75vw' },
+      { width: '100vw' },
+    ],
   },
 };

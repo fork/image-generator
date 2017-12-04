@@ -303,4 +303,12 @@ module.exports = [
       imageTypes.image_gallery_landscape,
     ],
   },
+  /*
+   * 2,4:1
+   */
+  {
+    name: 'dummy',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '24x10/dummy_24x10.png'),
+    imageTypes: [imageTypes.full_content_width_wide],
+  },
 ];
