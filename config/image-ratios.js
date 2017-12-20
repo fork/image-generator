@@ -6,4 +6,5 @@ module.exports = {
   RATIO_2x3: '2x3',
   RATIO_16x9: '16x9',
   RATIO_24x10: '24x10',
+  RATIO_4x1: '4x1',
 };

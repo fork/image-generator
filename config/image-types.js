@@ -1,18 +1,12 @@
 'use strict';
 
-const RATIO_1x1 = '1x1';
-const RATIO_1xy = '1xy';
-const RATIO_2x3 = '2x3';
-const RATIO_16x9 = '16x9';
-const RATIO_24x10 = '24x10';
-
-const FORMAT_JPG = 'jpg';
-const FORMAT_PNG = 'png';
+const imageRatios = require('./image-ratios');
+const imageFormats = require('./image-formats');
 
 module.exports = {
   decoration: {
-    ratio: RATIO_2x3,
-    format: FORMAT_PNG,
+    ratio: imageRatios.RATIO_2x3,
+    format: imageFormats.FORMAT_PNG,
     fallbackWidth: 450,
     widths: [380, 450, 760, 900],
     sizes: [
@@ -22,8 +16,8 @@ module.exports = {
     ],
   },
   image_stage_portrait: {
-    ratio: RATIO_2x3,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_2x3,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 640,
     widths: [300, 380, 490, 640, 760, 980, 1280, 1520],
     sizes: [
@@ -32,8 +26,8 @@ module.exports = {
     ],
   },
   full_viewport_width: {
-    ratio: RATIO_16x9,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_16x9,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 640,
     widths: [
       375,
@@ -53,8 +47,8 @@ module.exports = {
     sizes: [{ width: '100vw' }],
   },
   full_content_width: {
-    ratio: RATIO_16x9,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_16x9,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 640,
     widths: [375, 470, 640, 768, 960, 1280, 1600, 1920],
     sizes: [
@@ -65,8 +59,8 @@ module.exports = {
     ],
   },
   half_content_width_landscape: {
-    ratio: RATIO_16x9,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_16x9,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 470,
     widths: [210, 375, 470, 640, 960],
     sizes: [
@@ -77,8 +71,8 @@ module.exports = {
     ],
   },
   half_content_width_square: {
-    ratio: RATIO_1x1,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_1x1,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 480,
     widths: [240, 380, 480, 760, 960],
     sizes: [
@@ -89,8 +83,8 @@ module.exports = {
     ],
   },
   half_content_width_portrait: {
-    ratio: RATIO_2x3,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_2x3,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 480,
     widths: [240, 380, 490, 640, 980],
     sizes: [
@@ -101,8 +95,8 @@ module.exports = {
     ],
   },
   one_third_content_width_square: {
-    ratio: RATIO_1x1,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_1x1,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 380,
     widths: [80, 160, 240, 380, 480, 760],
     sizes: [
@@ -114,8 +108,8 @@ module.exports = {
     ],
   },
   retailer_logo: {
-    ratio: RATIO_1xy,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_1xy,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 240,
     widths: [240, 380, 480, 760],
     sizes: [
@@ -125,8 +119,8 @@ module.exports = {
     ],
   },
   image_gallery_landscape: {
-    ratio: RATIO_16x9,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_16x9,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 640,
     widths: [375, 470, 640, 768, 960, 1280, 1600, 1920],
     sizes: [
@@ -137,8 +131,8 @@ module.exports = {
     ],
   },
   image_gallery_portrait: {
-    ratio: RATIO_2x3,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_2x3,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 240,
     widths: [150, 180, 240, 300, 380, 490, 580, 760],
     sizes: [
@@ -149,8 +143,8 @@ module.exports = {
     ],
   },
   image_gallery_square: {
-    ratio: RATIO_1x1,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_1x1,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 360,
     widths: [240, 270, 380, 480, 540, 760, 880, 1080],
     sizes: [
@@ -161,8 +155,8 @@ module.exports = {
     ],
   },
   teaser_landscape: {
-    ratio: RATIO_16x9,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_16x9,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 640,
     widths: [375, 470, 640, 768, 960, 1280, 1600, 1920],
     sizes: [
@@ -173,8 +167,8 @@ module.exports = {
     ],
   },
   teaser_square: {
-    ratio: RATIO_1x1,
-    format: FORMAT_JPG,
+    ratio: imageRatios.RATIO_1x1,
+    format: imageFormats.FORMAT_JPG,
     fallbackWidth: 480,
     widths: [240, 380, 480, 760, 960],
     sizes: [
@@ -185,15 +179,15 @@ module.exports = {
     ],
   },
   teaser_jackpot: {
-    ratio: RATIO_1x1,
-    format: FORMAT_PNG,
+    ratio: imageRatios.RATIO_1x1,
+    format: imageFormats.FORMAT_PNG,
     fallbackWidth: 222,
     widths: [222, 444],
     sizes: [{ width: '222px' }],
   },
   full_content_width_wide: {
-    ratio: RATIO_24x10,
-    format: FORMAT_PNG,
+    ratio: imageRatios.RATIO_24x10,
+    format: imageFormats.FORMAT_PNG,
     fallbackWidth: 640,
     widths: [375, 470, 640, 768, 960, 1280, 1600, 1920],
     sizes: [
@@ -202,5 +196,26 @@ module.exports = {
       { condition: 'min-width: 700px', width: '75vw' },
       { width: '100vw' },
     ],
+  },
+  banner: {
+    ratio: imageRatios.RATIO_4x1,
+    format: imageFormats.FORMAT_JPG,
+    fallbackWidth: 640,
+    widths: [
+      375,
+      470,
+      640,
+      768,
+      960,
+      1024,
+      1280,
+      1600,
+      1920,
+      2048,
+      2560,
+      3200,
+      3840,
+    ],
+    sizes: [{ width: '100vw' }],
   },
 };

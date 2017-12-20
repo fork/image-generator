@@ -311,4 +311,12 @@ module.exports = [
     source: path.resolve(filePaths.IMAGES_INPUT_DIR, '24x10/dummy_24x10.png'),
     imageTypes: [imageTypes.full_content_width_wide],
   },
+  /*
+   * 4:1 (banner)
+   */
+  {
+    name: 'dummy',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '4x1/dummy_4x1.png'),
+    imageTypes: [imageTypes.banner],
+  },
 ];
