@@ -107,6 +107,60 @@ module.exports = [
       imageTypes.image_gallery_square,
     ],
   },
+  {
+    name: 'magazine_a',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/magazine_a_1x1.png'),
+    imageTypes: [
+      imageTypes.half_content_width_square,
+      imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
+    ],
+  },
+  {
+    name: 'magazine_b',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/magazine_b_1x1.png'),
+    imageTypes: [
+      imageTypes.half_content_width_square,
+      imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
+    ],
+  },
+  {
+    name: 'magazine_c',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/magazine_c_1x1.png'),
+    imageTypes: [
+      imageTypes.half_content_width_square,
+      imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
+    ],
+  },
+  {
+    name: 'magazine_d',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/magazine_d_1x1.png'),
+    imageTypes: [
+      imageTypes.half_content_width_square,
+      imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
+    ],
+  },
+  {
+    name: 'magazine_e',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/magazine_e_1x1.png'),
+    imageTypes: [
+      imageTypes.half_content_width_square,
+      imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
+    ],
+  },
+  {
+    name: 'magazine_f',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '1x1/magazine_f_1x1.png'),
+    imageTypes: [
+      imageTypes.half_content_width_square,
+      imageTypes.one_third_content_width_square,
+      imageTypes.image_gallery_square,
+    ],
+  },
   /*
    * 1xy
    */
@@ -301,6 +355,39 @@ module.exports = [
       imageTypes.full_content_width,
       imageTypes.half_content_width_landscape,
       imageTypes.image_gallery_landscape,
+    ],
+  },
+  {
+    name: 'magazine_a',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '16x9/magazine_a_16x9.png'),
+    imageTypes: [
+      imageTypes.full_viewport_width,
+      imageTypes.full_content_width,
+      imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
+      imageTypes.teaser_landscape,
+    ],
+  },
+  {
+    name: 'magazine_b',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '16x9/magazine_b_16x9.png'),
+    imageTypes: [
+      imageTypes.full_viewport_width,
+      imageTypes.full_content_width,
+      imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
+      imageTypes.teaser_landscape,
+    ],
+  },
+  {
+    name: 'magazine_c',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '16x9/magazine_c_16x9.png'),
+    imageTypes: [
+      imageTypes.full_viewport_width,
+      imageTypes.full_content_width,
+      imageTypes.half_content_width_landscape,
+      imageTypes.image_gallery_landscape,
+      imageTypes.teaser_landscape,
     ],
   },
   /*
