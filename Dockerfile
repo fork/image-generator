@@ -6,6 +6,8 @@ RUN apt-get update \
 
 RUN npm install yarn -g
 
+RUN yarn
+
 WORKDIR /usr/app
 
 CMD yarn start
