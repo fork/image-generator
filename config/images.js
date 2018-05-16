@@ -406,4 +406,97 @@ module.exports = [
     source: path.resolve(filePaths.IMAGES_INPUT_DIR, '4x1/dummy_4x1.png'),
     imageTypes: [imageTypes.banner],
   },
+  /*
+   * custom
+   */
+  {
+    name: 'hero-stage-qualitaet-frische-background',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-qualitaet-frische-background_custom.jpg'),
+    imageTypes: [imageTypes.hero_stage_background],
+  },
+  {
+    name: 'hero-stage-qualitaet-frische-center',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-qualitaet-frische-center_custom.png'),
+    imageTypes: [imageTypes.hero_stage_center],
+  },
+  {
+    name: 'hero-stage-qualitaet-frische-decoration-left',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-qualitaet-frische-decoration-left_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-qualitaet-frische-decoration-right',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-qualitaet-frische-decoration-right_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-qualitaet-frische-badge',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-qualitaet-frische-badge_custom.png'),
+    imageTypes: [imageTypes.hero_stage_badge],
+  },
+  {
+    name: 'hero-stage-feierbiest-background',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-feierbiest-background_custom.jpg'),
+    imageTypes: [imageTypes.hero_stage_background],
+  },
+  {
+    name: 'hero-stage-feierbiest-center',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-feierbiest-center_custom.png'),
+    imageTypes: [imageTypes.hero_stage_center],
+  },
+  {
+    name: 'hero-stage-feierbiest-decoration-left',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-feierbiest-decoration-left_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-feierbiest-decoration-right',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-feierbiest-decoration-right_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-feierbiest-badge',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-feierbiest-badge_custom.png'),
+    imageTypes: [imageTypes.hero_stage_badge],
+  },
+  {
+    name: 'hero-stage-wwf-background',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-wwf-background_custom.jpg'),
+    imageTypes: [imageTypes.hero_stage_background],
+  },
+  {
+    name: 'hero-stage-wwf-decoration-left',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-wwf-decoration-left_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-wwf-decoration-right',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-wwf-decoration-right_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-wwf-badge',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-wwf-badge_custom.png'),
+    imageTypes: [imageTypes.hero_stage_badge],
+  },
+  {
+    name: 'hero-stage-produkte-background',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-produkte-background_custom.png'),
+    imageTypes: [imageTypes.hero_stage_background_transparent],
+  },
+  {
+    name: 'hero-stage-produkte-decoration-left',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-produkte-decoration-left_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-produkte-decoration-right',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-produkte-decoration-right_custom.png'),
+    imageTypes: [imageTypes.hero_stage_decoration],
+  },
+  {
+    name: 'hero-stage-produkte-badge',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, 'custom/hero-stage-produkte-badge_custom.png'),
+    imageTypes: [imageTypes.hero_stage_badge],
+  },
 ];
