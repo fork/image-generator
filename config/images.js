@@ -406,6 +406,11 @@ module.exports = [
     source: path.resolve(filePaths.IMAGES_INPUT_DIR, '4x1/dummy_4x1.png'),
     imageTypes: [imageTypes.banner],
   },
+  {
+    name: 'recipe',
+    source: path.resolve(filePaths.IMAGES_INPUT_DIR, '4x1/recipe_4x1.png'),
+    imageTypes: [imageTypes.banner],
+  },
   /*
    * custom
    */
